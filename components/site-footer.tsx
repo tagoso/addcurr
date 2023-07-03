@@ -45,12 +45,12 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           <h3 className="font-bold text-lg">Reset All 💥</h3>
           <p className="py-4">
-            <span>This button will remove all input and try to resolve the latest currency rate.</span>
+            <span>Clicking this button will clear all inputs and fetch the latest currency exchange rates.</span>
           </p>
           <h3 className="font-bold text-lg">Refresh Rate 💁‍♀️</h3>
           <p className="py-4">
             <span>
-              This button will keep your input and ask the latest rate, so you can update the total to latest.
+              This button preserves your inputs and fetches the latest exchange rates, allowing you to update the total.
             </span>
           </p>
           <h3 className="font-bold text-lg">Data Source 📈</h3>
@@ -65,7 +65,7 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           </p>
           <h3 className="font-bold text-lg">Pro tip: Copy 📋</h3>
           <p className="py-4">
-            <span>You can click and copy the total number.</span>
+            <span>You can click the total number to copy it.</span>
           </p>
         </form>
       </dialog>
