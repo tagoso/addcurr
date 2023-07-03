@@ -217,7 +217,7 @@ const ForexConverter: React.FC = () => {
   useEffect(() => {
     fetchData();
     setIsDisabled(true);
-    setTimeout(() => setIsDisabled(false), 20000); // Enable the button after xx seconds
+    setTimeout(() => setIsDisabled(false), 10000); // Enable the button after xx seconds
   }, []);
 
   // fetch data from API
@@ -265,7 +265,7 @@ const ForexConverter: React.FC = () => {
       setNgnRate(forexData.results.NGN);
       setSelectedBase(forexData.results[selectedName]);
       setIsDisabled(true);
-      setTimeout(() => setIsDisabled(false), 20000); // Enable the button after xx seconds
+      setTimeout(() => setIsDisabled(false), 10000); // Enable the button after xx seconds
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [forexData]);
@@ -385,14 +385,14 @@ const ForexConverter: React.FC = () => {
           <span className="loading loading-ring loading-xs"></span>Reset All
         </button>
         {isDisabled ? (
-          <button className="btn btn-xs mx-1 bg-gray-300" disabled>
+          <button className="btn btn-xs mx-1 bg-gray-200">
             <span className="loading loading-ring loading-xs"></span>
-            Refresh Rate
+            Attempt Rate Update
           </button>
         ) : (
           <button onClick={fetchData} className="btn btn-xs mx-1 bg-gray-200">
             <span className="loading loading-ring loading-xs"></span>
-            Refresh Rate
+            Attempt Rate Update
           </button>
         )}
       </div>
