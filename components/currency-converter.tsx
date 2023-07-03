@@ -216,6 +216,8 @@ const ForexConverter: React.FC = () => {
   // fetch data when the page is loaded
   useEffect(() => {
     fetchData();
+    setIsDisabled(true);
+    setTimeout(() => setIsDisabled(false), 60000); // Enable the button after xx seconds
   }, []);
 
   // fetch data from API
@@ -265,7 +267,7 @@ const ForexConverter: React.FC = () => {
       console.log("API data refreshed!");
       console.log("dateUpdate: " + dateUpdate);
       setIsDisabled(true);
-      setTimeout(() => setIsDisabled(false), 0); // Enable the button after xx seconds: now it's disabled
+      setTimeout(() => setIsDisabled(false), 60000); // Enable the button after xx seconds
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dateUpdate, forexData]);
