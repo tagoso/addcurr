@@ -265,7 +265,7 @@ const ForexConverter: React.FC = () => {
       console.log("API data refreshed!");
       console.log("dateUpdate: " + dateUpdate);
       setIsDisabled(true);
-      setTimeout(() => setIsDisabled(false), 20000); // Enable the button after 20 seconds
+      setTimeout(() => setIsDisabled(false), 30000); // Enable the button after 20 seconds
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dateUpdate, forexData]);
