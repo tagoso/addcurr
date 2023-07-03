@@ -37,7 +37,7 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
         </span>
         {" / "}
         <span className="underline">
-          <a href="https://hi.tago.so">Contact</a>
+          <a href="https://github.com/tagoso/addcurr">View on GitHub</a>
         </span>
       </div>
       <dialog id="information_modal" className="modal">
