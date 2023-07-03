@@ -1,11 +1,11 @@
 async function FetchAPI() {
-  const res = await fetch(`https://api.fastforex.io/fetch-all?api_key=${process.env.NEXT_PUBLIC_FASTFOREX_API_KEY}`);
+  const res = await fetch(`/api`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  const ForexData = await res.json();
-  return ForexData;
+  const data = await res.json();
+  return data.ForexData;
 }
 
 export default FetchAPI;
