@@ -33,10 +33,6 @@ This is a solo project of Tago So, but most of heavy duties are done by wonderfu
 
 Please join me if you know stuff below. Let's power up AddCurr together 💪
 
-### Hosting
-
-- [Vercel](https://vercel.com/)
-
 ### UI Libraries
 
 - [React](https://react.dev/)
@@ -58,6 +54,10 @@ Please join me if you know stuff below. Let's power up AddCurr together 💪
 ### API used
 
 - [FastForex](https://www.fastforex.io/)
+
+### Hosting
+
+- [Vercel](https://vercel.com/)
 
 ### Packages
 
