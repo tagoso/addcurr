@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
 // These styles apply to every route in the application
@@ -15,6 +16,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       <body className="max-w-3xl mx-auto py-2 md:py-5 px-2">
         <main className="py-3 md:py-5">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
