@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
  
-export async function GET()  {
-    const res = await fetch(`https://api.fastforex.io/fetch-all?api_key=${process.env.NEXT_PUBLIC_FASTFOREX_API_KEY}`);
+export async function GET(request: Request)  {
+    const res = await fetch(`https://api.fastforex.io/fetch-all?api_key=${process.env.NEXT_PUBLIC_FASTFOREX_API_KEY}`, { next: { revalidate: 30 } });
   
     if (!res.ok) {
       throw new Error("Failed to fetch data");
