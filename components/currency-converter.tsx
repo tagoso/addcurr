@@ -264,8 +264,6 @@ const ForexConverter: React.FC = () => {
       setPhpRate(forexData.results.PHP);
       setNgnRate(forexData.results.NGN);
       setSelectedBase(forexData.results[selectedName]);
-      console.log("API data refreshed!");
-      console.log("dateUpdate: " + dateUpdate);
       setIsDisabled(true);
       setTimeout(() => setIsDisabled(false), 60000); // Enable the button after xx seconds
     }

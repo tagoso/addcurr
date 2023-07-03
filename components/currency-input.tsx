@@ -29,8 +29,6 @@ const InputCurrency: React.FC<InputCurrencyProps> = ({ onInputChange, id, name, 
         className="w-full text-lg md:text-2xl text-right my-1
         flex-wrap bg-slate-50 dark:bg-slate-50 placeholder:text-slate-400"
         onValueChange={(value, name) => {
-          console.log(`New value: ${value}, Field name: ${name}`);
-          console.log(value, name);
           // convert value to number
           onInputChange(value ? parseFloat(value) : undefined);
         }}
