@@ -217,7 +217,6 @@ const ForexConverter: React.FC = () => {
   useEffect(() => {
     fetchData();
     setIsDisabled(true);
-    setTimeout(() => setIsDisabled(false), 10000); // Enable the button after xx seconds
   }, []);
 
   // fetch data from API
