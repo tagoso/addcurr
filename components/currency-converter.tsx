@@ -270,7 +270,7 @@ const ForexConverter: React.FC = () => {
       setTimeout(() => setIsDisabled(false), 60000); // Enable the button after xx seconds
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dateUpdate, forexData]);
+  }, [forexData]);
 
   // show loading animation (daisyui)
   if (forexData === null) {
