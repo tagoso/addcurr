@@ -217,7 +217,7 @@ const ForexConverter: React.FC = () => {
   useEffect(() => {
     fetchData();
     setIsDisabled(true);
-    setTimeout(() => setIsDisabled(false), 60000); // Enable the button after xx seconds
+    setTimeout(() => setIsDisabled(false), 20000); // Enable the button after xx seconds
   }, []);
 
   // fetch data from API
@@ -265,7 +265,7 @@ const ForexConverter: React.FC = () => {
       setNgnRate(forexData.results.NGN);
       setSelectedBase(forexData.results[selectedName]);
       setIsDisabled(true);
-      setTimeout(() => setIsDisabled(false), 60000); // Enable the button after xx seconds
+      setTimeout(() => setIsDisabled(false), 20000); // Enable the button after xx seconds
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [forexData]);
