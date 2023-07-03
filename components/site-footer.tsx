@@ -49,9 +49,7 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           </p>
           <h3 className="font-bold text-lg">Attempt Rate Update 💁‍♀️</h3>
           <p className="py-4">
-            <span>
-              This button preserves your inputs and fetches the latest exchange rates, allowing you to update the total.
-            </span>
+            <span>This button preserves your inputs and tries to fetche the latest exchange rates (if available).</span>
           </p>
           <h3 className="font-bold text-lg">Data Source 📈</h3>
           <p className="py-4">
