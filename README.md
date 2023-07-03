@@ -4,7 +4,7 @@ AddCurr lets you handle multiple currencies with ease, like never before!
 
 AddCurr converts multiple currencies into one. Yes, you can input JPY, EUR, GBP and convert all of them into USD with one click.
 
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWZwa3gxNzBiNHNiZjM4MWRncDI3OHQ3N2hybjloa21ydzkxdHhsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bfxUuhh01KWQqdI5xT/giphy.gif)
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnZrbnB3azBsam0wdHNjazBxMHRvd2VtcmIwZ292ZGMzc29qeXk4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fBd8uBWvQRQ7lM6i9s/giphy.gif)
 
 ## Your travel & asset partner
 
