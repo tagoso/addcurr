@@ -394,7 +394,7 @@ const ForexConverter: React.FC = () => {
           <span className="loading loading-ring loading-xs"></span>Reset All
         </button>
         {isDisabled ? (
-          <button className="btn btn-xs mx-1 bg-gray-300" disabled>
+          <button className="btn btn-xs mx-1 bg-gray-200">
             <span className="loading loading-ring loading-xs"></span>
             Attempt Rate Update
           </button>
