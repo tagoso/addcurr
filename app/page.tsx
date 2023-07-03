@@ -1,5 +1,3 @@
-"use client";
-
 import ForexConverter from "@/components/currency-converter";
 
 export default function Page() {
