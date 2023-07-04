@@ -359,7 +359,7 @@ const ForexConverter: React.FC = () => {
       key={code}
       className={`${
         selectedName === code
-          ? "w-1/2 sm:w-1/3 p-1 h-auto rounded-md overflow-hidden bg-gray-200 shadow-lg"
+          ? "w-1/2 sm:w-1/3 p-1 h-auto rounded-md overflow-hidden bg-gray-200 dark:bg-gray-600 shadow-lg"
           : "w-1/2 sm:w-1/3 p-1 h-auto rounded-md overflow-hidden"
       }`}
     >
@@ -396,14 +396,14 @@ const ForexConverter: React.FC = () => {
       </div>
 
       <details>
-        <summary className="w-max cursor-pointer pl-1 m-1">12 more currencies!</summary>
+        <summary className="w-max cursor-pointer pl-1 m-1 dark:text-slate-400">12 more currencies!</summary>
         <div className="flex content-start flex-wrap">
           {Object.entries(currencies).slice(9).map(createCurrencyComponent)}
         </div>
       </details>
 
       <div
-        className="cursor-pointer box-border rounded-xl h-auto w-auto text-lg md:text-2xl p-2 m-2 border-2 border-gray-300 bg-gray-200"
+        className="cursor-pointer box-border rounded-xl h-auto w-auto text-lg md:text-2xl p-2 m-2 border-2 border-gray-300 bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-slate-400"
         onClick={() =>
           copyToClipboard(
             !["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(selectedName)
@@ -420,10 +420,11 @@ const ForexConverter: React.FC = () => {
           {selectedName}{" "}
         </span>
       </div>
-      <div className="p-1 px-2 m-1 text-sm md:text-base text-slate-500">✅ {formattedUTCDate}</div>
+      <div className="p-1 px-2 m-1 text-sm md:text-base text-slate-500 dark:text-slate-400">✅ {formattedUTCDate}</div>
       <div className="py-1 m-1">
         <button onClick={() => window.location.reload()} className="btn btn-xs mx-1 bg-gray-200">
-          <span className="loading loading-ring loading-xs"></span>Reset All
+          <span className="loading loading-ring loading-xs"></span>
+          Reset All
         </button>
         {isDisabled ? (
           <button className="btn btn-xs mx-1 bg-gray-200">

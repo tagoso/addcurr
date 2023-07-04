@@ -23,7 +23,7 @@ type SiteFooterProps = SiteFooterRateProps & DateProps;
 const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate }) => {
   return (
     <>
-      <div className="px-1 p-2 m-1 text-sm md:text-base text-slate-500">
+      <div className="px-1 p-2 m-1 text-sm md:text-base text-slate-500 dark:text-slate-400">
         <span className="underline cursor-pointer" onClick={() => window.information_modal.showModal()}>
           FAQ
         </span>
@@ -40,8 +40,8 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           <a href="https://github.com/tagoso/addcurr">View on GitHub</a>
         </span>
       </div>
-      <dialog id="information_modal" className="modal">
-        <form method="dialog" className="modal-box  bg-slate-50">
+      <dialog id="information_modal" className="modal dark:text-slate-400">
+        <form method="dialog" className="modal-box  bg-slate-50 dark:bg-slate-800">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           <h3 className="font-bold text-lg">Reset All 💥</h3>
           <p className="py-4">
@@ -67,8 +67,8 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           </p>
         </form>
       </dialog>
-      <dialog id="rate_modal" className="modal">
-        <form method="dialog" className="modal-box  bg-slate-50">
+      <dialog id="rate_modal" className="modal dark:text-slate-400">
+        <form method="dialog" className="modal-box  bg-slate-50 dark:bg-slate-800">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           <h3 className="font-bold text-lg">Rate 💱</h3>
           <p className="py-4">
@@ -85,8 +85,8 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           </p>
         </form>
       </dialog>
-      <dialog id="dislaimer_modal" className="modal">
-        <form method="dialog" className="modal-box  bg-slate-50">
+      <dialog id="dislaimer_modal" className="modal dark:text-slate-400">
+        <form method="dialog" className="modal-box  bg-slate-50  dark:bg-slate-800">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           <h3 className="font-bold text-lg">Disclaimer 💃</h3>
           <p className="py-4">
