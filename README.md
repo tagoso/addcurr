@@ -1,4 +1,4 @@
-# AddCurr
+# AddCurr 💱
 
 AddCurr lets you handle multiple currencies with ease, like never before!
 
@@ -18,8 +18,9 @@ Answer with AddCurr: You used 1595.98 USD, so you still have 1404.02 USD / 49,55
 - Convert multiple currencies into one currency
 - Real-time data from [FastForex](https://www.fastforex.io/)
 - 21 hand-picked currencies from 6 continents
-- Simple and husstle-free design
-- Zero fee to use! And of course, you can donate ☕️
+  - USD🇺🇸,EUR🇪🇺,CNY🇨🇳,JPY🇯🇵,GBP🇬🇧,AUD🇦🇺,INR🇮🇳,BRL🇧🇷,ZAR🇿🇦,CHF🇨🇭,SEK🇸🇪,CAD🇨🇦,RUB🇷🇺,MYX🇲🇽,TRY🇹🇷,SAR🇸🇦,MYR🇲🇾,NZD🇳🇿,THB🇹🇭,PHP🇵🇭,NGN🇳🇬
+- Simple and intuitive design
+- Free to use!
 
 ## Story
 
