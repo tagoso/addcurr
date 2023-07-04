@@ -15,6 +15,7 @@ const ForexConverter: React.FC = () => {
   const [hasForexDataBeenFetched, setHasForexDataBeenFetched] = useState<boolean>(false);
   const [dateUpdate, setDateUpdate] = useState<string>("");
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // useState for user input value
   const [usdValue, setUsdValue] = useState<number | undefined>(undefined);
@@ -226,6 +227,8 @@ const ForexConverter: React.FC = () => {
       setForexData(data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -238,6 +241,8 @@ const ForexConverter: React.FC = () => {
       setForexData(data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -252,6 +257,7 @@ const ForexConverter: React.FC = () => {
   // when forexData refreshed (inc. first time)
   useEffect(() => {
     if (forexData !== null) {
+      setIsLoading(false);
       setDateUpdate(forexData.updated);
       setUsdRate(forexData.results.USD);
       setEurRate(forexData.results.EUR);
@@ -281,11 +287,37 @@ const ForexConverter: React.FC = () => {
 
   // show loading animation (daisyui)
   if (forexData === null) {
-    return (
-      <div className="h-96">
-        <span className="loading loading-dots loading-lg"></span>
-      </div>
-    );
+    setTimeout(() => setIsLoading(false), 50000); // Enable the button after xx seconds
+    if (isLoading === true) {
+      return (
+        <div className="h-96">
+          <span className="loading loading-dots loading-lg"></span>
+        </div>
+      );
+    } else if (isLoading === false) {
+      return (
+        <>
+          <div className="h-96">
+            <span>Sorry, we cannot fetch the forex data right now!</span>
+            <br />
+            <span>Please come back later.</span>
+            <br />
+
+            <ul className="my-4">
+              <span>By the way, here are some possible reasons 🤔</span>
+              <li>
+                - FastForex (our data sourse) is not responding. You can check its status{" "}
+                <a className="underline" href="https://www.fastforex.io/">
+                  here
+                </a>{" "}
+                .
+              </li>
+              <li>- Your internet connection is not stable.</li>
+            </ul>
+          </div>
+        </>
+      );
+    }
   }
 
   // fire when currency is selected
