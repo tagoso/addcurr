@@ -70,7 +70,7 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
       <dialog id="rate_modal" className="modal dark:text-slate-400">
         <form method="dialog" className="modal-box  bg-slate-50 dark:bg-slate-800">
           <button className="btn-ghost btn-sm btn-circle btn absolute right-2 top-2">✕</button>
-          <h3 className="text-lg font-bold">Rate 💱</h3>
+          <h3 className="text-lg font-bold">Rate 🌐</h3>
           <p className="py-4">
             ✅ {formattedUTCDate}
             <br />
