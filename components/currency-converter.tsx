@@ -367,7 +367,7 @@ const ForexConverter: React.FC = () => {
         onClick={() => baseCurrency(currency)}
         className={`${
           selectedName === code
-            ? "w-full bg-gradient-to-r from-orange-400 from-40% via-red-500 via-50% to-purple-600 to-60% bg-clip-text text-lg font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-sky-400 md:text-2xl"
+            ? "w-full bg-gradient-to-r from-orange-400 from-40% via-red-500 via-50% to-purple-600 to-60% bg-clip-text text-lg font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-indigo-400 md:text-2xl"
             : "w-full text-lg italic text-slate-500 md:text-2xl lg:text-2xl"
         }`}
       >
@@ -416,7 +416,7 @@ const ForexConverter: React.FC = () => {
         {!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(selectedName)
           ? numberWithCommas(totalValue.toFixed(2))
           : numberWithCommas(totalValue.toFixed(0))}{" "}
-        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text px-1 text-lg font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-sky-400 md:text-2xl">
+        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text px-1 text-lg font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-indigo-400 md:text-2xl">
           {selectedName}{" "}
         </span>
       </div>
