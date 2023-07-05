@@ -8,11 +8,23 @@ interface InputCurrencyProps {
   type: string;
   prefix: string;
   placeholder: string;
+  decimalSeparator: string;
+  groupSeparator: string;
   value: number | undefined;
   baseCurrency: () => void;
 }
 
-const InputCurrency: React.FC<InputCurrencyProps> = ({ onInputChange, id, name, type, prefix, value, placeholder }) => {
+const InputCurrency: React.FC<InputCurrencyProps> = ({
+  onInputChange,
+  id,
+  name,
+  type,
+  prefix,
+  value,
+  placeholder,
+  decimalSeparator,
+  groupSeparator,
+}) => {
   return (
     <>
       <CurrencyInput
@@ -23,6 +35,8 @@ const InputCurrency: React.FC<InputCurrencyProps> = ({ onInputChange, id, name, 
         value={value}
         maxLength={9}
         placeholder={placeholder}
+        decimalSeparator={decimalSeparator}
+        groupSeparator={groupSeparator}
         decimalsLimit={2}
         decimalScale={!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(name) ? 2 : 0}
         autoComplete="off"

@@ -16,6 +16,7 @@ const ForexConverter: React.FC = () => {
   const [dateUpdate, setDateUpdate] = useState<string>("");
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [altSeparator, setAltSeparator] = useState<boolean>(false);
 
   // useState for user input value
   const [usdValue, setUsdValue] = useState<number | undefined>(undefined);
@@ -353,6 +354,9 @@ const ForexConverter: React.FC = () => {
     }
   }
 
+  // toggle separator
+  const toggleSeparator = () => setAltSeparator(!altSeparator);
+
   // currency conponent
   const createCurrencyComponent = ([code, currency]: [string, CurrencyInfo]) => (
     <div
@@ -379,7 +383,15 @@ const ForexConverter: React.FC = () => {
         type={"search"}
         prefix={""}
         value={undefined}
-        placeholder={!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(code) ? "0.00" : "0"}
+        decimalSeparator={!altSeparator === false ? "." : " "}
+        groupSeparator={!altSeparator === false ? "," : ","}
+        placeholder={
+          !["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(code) && altSeparator === false
+            ? "0.00"
+            : !["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(code) && altSeparator === true
+            ? "0,00"
+            : "0"
+        }
         onInputChange={currency.setValue}
         baseCurrency={function (): void {
           throw new Error("Function not implemented.");
@@ -439,6 +451,7 @@ const ForexConverter: React.FC = () => {
         )}
       </div>
       <SiteFooter currencies={currencies} formattedUTCDate={formattedUTCDate} />
+      <input onClick={toggleSeparator} type="checkbox" className="toggle" />
     </>
   );
 };
