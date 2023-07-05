@@ -26,8 +26,8 @@ const InputCurrency: React.FC<InputCurrencyProps> = ({ onInputChange, id, name, 
         decimalsLimit={2}
         decimalScale={!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(name) ? 2 : 0}
         autoComplete="off"
-        className="w-full text-lg md:text-2xl text-right my-1
-        flex-wrap bg-slate-50 placeholder:text-slate-400 dark:border-gray-700 dark:bg-gray-800"
+        className="my-1 w-full flex-wrap bg-slate-50 text-right
+        text-lg placeholder:text-slate-400 dark:border-gray-700 dark:bg-gray-800 md:text-2xl"
         onValueChange={(value, name) => {
           // convert value to number
           onInputChange(value ? parseFloat(value) : undefined);

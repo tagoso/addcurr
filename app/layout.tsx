@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className="bg-slate-100 dark:bg-slate-700 font-mono text-slate-700  dark:text-slate-300" lang="en">
+    <html className="bg-slate-100 font-mono text-slate-700 dark:bg-slate-700  dark:text-slate-300" lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-      <body className="max-w-3xl mx-auto py-2 md:py-5 px-2">
+      <body className="mx-auto max-w-3xl px-2 py-2 md:py-5">
         <main className="py-3 md:py-5">{children}</main>
         <Analytics />
       </body>

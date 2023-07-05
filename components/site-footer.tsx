@@ -23,16 +23,16 @@ type SiteFooterProps = SiteFooterRateProps & DateProps;
 const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate }) => {
   return (
     <>
-      <div className="px-1 p-2 m-1 text-sm md:text-base text-slate-500 dark:text-slate-400">
-        <span className="underline cursor-pointer" onClick={() => window.information_modal.showModal()}>
+      <div className="m-1 p-2 px-1 text-sm text-slate-500 dark:text-slate-400 md:text-base">
+        <span className="cursor-pointer underline" onClick={() => window.information_modal.showModal()}>
           FAQ
         </span>
         {" / "}
-        <span className="underline cursor-pointer" onClick={() => window.rate_modal.showModal()}>
+        <span className="cursor-pointer underline" onClick={() => window.rate_modal.showModal()}>
           Rate
         </span>
         {" / "}
-        <span className="underline cursor-pointer" onClick={() => window.dislaimer_modal.showModal()}>
+        <span className="cursor-pointer underline" onClick={() => window.dislaimer_modal.showModal()}>
           Disclaimer
         </span>
         {" / "}
@@ -42,16 +42,16 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
       </div>
       <dialog id="information_modal" className="modal dark:text-slate-400">
         <form method="dialog" className="modal-box  bg-slate-50 dark:bg-slate-800">
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-          <h3 className="font-bold text-lg">Reset All 💥</h3>
+          <button className="btn-ghost btn-sm btn-circle btn absolute right-2 top-2">✕</button>
+          <h3 className="text-lg font-bold">Reset All 💥</h3>
           <p className="py-4">
             <span>This button will clear all inputs and fetch the latest currency exchange rates.</span>
           </p>
-          <h3 className="font-bold text-lg">Attempt Rate Update 💁‍♀️</h3>
+          <h3 className="text-lg font-bold">Attempt Rate Update 💁‍♀️</h3>
           <p className="py-4">
             <span>This button preserves your inputs and tries to fetche the latest exchange rates (if available).</span>
           </p>
-          <h3 className="font-bold text-lg">Data Source 📈</h3>
+          <h3 className="text-lg font-bold">Data Source 📈</h3>
           <p className="py-4">
             <span>
               AddCurr gets real-time data from{" "}
@@ -61,7 +61,7 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
               .
             </span>
           </p>
-          <h3 className="font-bold text-lg">Pro tip: Copy 📋</h3>
+          <h3 className="text-lg font-bold">Pro tip: Copy 📋</h3>
           <p className="py-4">
             <span>You can click the total number to copy it.</span>
           </p>
@@ -69,8 +69,8 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
       </dialog>
       <dialog id="rate_modal" className="modal dark:text-slate-400">
         <form method="dialog" className="modal-box  bg-slate-50 dark:bg-slate-800">
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-          <h3 className="font-bold text-lg">Rate 💱</h3>
+          <button className="btn-ghost btn-sm btn-circle btn absolute right-2 top-2">✕</button>
+          <h3 className="text-lg font-bold">Rate 💱</h3>
           <p className="py-4">
             ✅ {formattedUTCDate}
             <br />
@@ -87,8 +87,8 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
       </dialog>
       <dialog id="dislaimer_modal" className="modal dark:text-slate-400">
         <form method="dialog" className="modal-box  bg-slate-50  dark:bg-slate-800">
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-          <h3 className="font-bold text-lg">Disclaimer 💃</h3>
+          <button className="btn-ghost btn-sm btn-circle btn absolute right-2 top-2">✕</button>
+          <h3 className="text-lg font-bold">Disclaimer 💃</h3>
           <p className="py-4">
             <span>
               AddCurr provides data for informational use only. We do not offer financial, investment, legal, or

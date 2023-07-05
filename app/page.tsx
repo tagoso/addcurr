@@ -3,9 +3,9 @@ import ForexConverter from "@/components/currency-converter";
 export default function Page() {
   return (
     <>
-      <header className="items-center m-0">
+      <header className="m-0 items-center">
         AddCurr - convert multiple currencies into{" "}
-        <span className="font-extrabold bg-gradient-to-r italic from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text font-extrabold italic text-transparent">
           one
         </span>
       </header>
