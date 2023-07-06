@@ -28,7 +28,7 @@ const InputCurrency: React.FC<InputCurrencyProps> = ({ onInputChange, id, name, 
         autoComplete="off"
         className="my-1 w-full flex-wrap bg-slate-50 text-right
         text-lg placeholder:text-slate-400 dark:border-gray-700 dark:bg-gray-800 md:text-2xl"
-        onValueChange={(value, name) => {
+        onValueChange={(value) => {
           // convert value to number
           onInputChange(value ? parseFloat(value) : undefined);
         }}
