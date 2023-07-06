@@ -345,9 +345,9 @@ const ForexConverter: React.FC = () => {
   const date = new Date(localDate);
 
   // Format the date using getUTCFullYear(), getUTCMonth(), getUTCDate(), getUTCHours(), and getUTCMinutes() methods
-  const formattedUTCDate = `${date.getUTCDate()}.${
-    date.getUTCMonth() + 1
-  }.${date.getUTCFullYear()} ${date.getUTCHours()}:${date.getUTCMinutes()} GMT`;
+  const formattedUTCDate = `${date.getUTCDate()}.${date.getUTCMonth() + 1}.${date.getUTCFullYear()} ${(
+    "0" + date.getUTCHours()
+  ).slice(-2)}:${("0" + date.getUTCMinutes()).slice(-2)} GMT`;
 
   // total value
   const totalValue = Object.values(currencies).reduce(
