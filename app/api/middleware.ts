@@ -7,12 +7,14 @@ export function middleware(request: NextRequest) {
   const allowedOrigins = ['http://localhost:3000', 'https://addcurr.tago.so'];
   const { origin } = new URL(request.url);
 
-  if (!allowedOrigins.includes(origin)) {
+
+  return new NextResponse('Hello, middleware!')
+ /*  if (!allowedOrigins.includes(origin)) {
     // If the origin is not allowed, respond with a 403 status
     return new NextResponse(null, { status: 403 });
   }
     // If the origin is allowed, continue with the request
-    return NextResponse.next();
+    return NextResponse.next(); */
 }
 
 export const config = {
