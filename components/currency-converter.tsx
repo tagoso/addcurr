@@ -236,7 +236,7 @@ const ForexConverter: React.FC = () => {
   const refreshRate = async () => {
     try {
       setIsDisabled(true);
-      setTimeout(() => setIsDisabled(false), 10000); // Enable the button after xx seconds
+      setTimeout(() => setIsDisabled(false), 20000); // Enable the button after xx seconds
       const data = await FetchAPI();
       setForexData(data);
     } catch (error) {
@@ -341,9 +341,13 @@ const ForexConverter: React.FC = () => {
   // for meta data
 
   const utcDateStr = dateUpdate;
-  const localDate = utcDateStr.replace(" ", "T") + "Z"; // results in "2023-06-20T18:11:36Z"
+  const localDate = utcDateStr.replace(" ", "T") + "Z";
   const date = new Date(localDate);
-  const formattedUTCDate = date.toUTCString();
+
+  // Format the date using getUTCFullYear(), getUTCMonth(), getUTCDate(), getUTCHours(), and getUTCMinutes() methods
+  const formattedUTCDate = `${date.getUTCDate()}.${
+    date.getUTCMonth() + 1
+  }.${date.getUTCFullYear()} ${date.getUTCHours()}:${date.getUTCMinutes()} GMT`;
 
   // total value
   const totalValue = Object.values(currencies).reduce(
