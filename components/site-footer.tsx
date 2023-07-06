@@ -65,6 +65,10 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           <p className="py-4">
             <span>You can click the total number to copy it.</span>
           </p>
+          <h3 className="text-lg font-bold">Pro tip: Negative value ⊖</h3>
+          <p className="py-4">
+            <span>You can enter negative value by typing &quot;-&quot;.</span>
+          </p>
         </form>
       </dialog>
       <dialog id="rate_modal" className="modal dark:text-slate-400">
