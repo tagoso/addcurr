@@ -55,9 +55,9 @@ export type Currency =
 // interface for currency object
 export interface CurrencyInfo {
     name: Currency;
-    value: number | undefined;
+    value: any;
     rate: number | undefined;
     symbol: string;
-    setValue: React.Dispatch<React.SetStateAction<number | undefined>>;
+    setValue: React.Dispatch<React.SetStateAction<any>>;
   }
   

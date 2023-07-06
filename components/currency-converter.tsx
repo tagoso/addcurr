@@ -254,7 +254,7 @@ const ForexConverter: React.FC = () => {
     }
   }, [forexData, hasForexDataBeenFetched]);
 
-  // when forexData refreshed (inc. first time)
+  // when forexData refreshed (including the first time)
   useEffect(() => {
     if (forexData !== null) {
       setIsLoading(false);
@@ -284,6 +284,13 @@ const ForexConverter: React.FC = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [forexData]);
+
+  // reset input
+  const resetInput = async () => {
+    for (const currency of Object.values(currencies)) {
+      currency.setValue("");
+    }
+  };
 
   // show loading animation (daisyui)
   if (forexData === null) {
@@ -332,6 +339,7 @@ const ForexConverter: React.FC = () => {
   };
 
   // for meta data
+
   const utcDateStr = dateUpdate;
   const localDate = utcDateStr.replace(" ", "T") + "Z"; // results in "2023-06-20T18:11:36Z"
   const date = new Date(localDate);
@@ -378,7 +386,9 @@ const ForexConverter: React.FC = () => {
         name={code}
         type={"search"}
         prefix={""}
-        value={undefined}
+        defaultValue={""}
+        value={currency.value ? currency.value.toString() : ""}
+        decimalSeparator={"."}
         placeholder={!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(code) ? "0.00" : "0"}
         onInputChange={currency.setValue}
         baseCurrency={function (): void {
@@ -422,9 +432,9 @@ const ForexConverter: React.FC = () => {
       </div>
       <div className="m-1 p-1 px-2 text-sm text-slate-500 dark:text-slate-400 md:text-base">✅ {formattedUTCDate}</div>
       <div className="m-1 py-1">
-        <button onClick={() => window.location.reload()} className="btn-xs btn mx-1 bg-gray-200">
+        <button onClick={resetInput} className="btn-xs btn mx-1 bg-gray-200">
           <span className="loading loading-ring loading-xs"></span>
-          Reset All
+          Reset Input
         </button>
         {isDisabled ? (
           <button className="btn-xs btn mx-1 bg-gray-200">

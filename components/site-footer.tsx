@@ -43,9 +43,9 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
       <dialog id="information_modal" className="modal dark:text-slate-400">
         <form method="dialog" className="modal-box  bg-slate-50 dark:bg-slate-800">
           <button className="btn-ghost btn-sm btn-circle btn absolute right-2 top-2">✕</button>
-          <h3 className="text-lg font-bold">Reset All 💥</h3>
+          <h3 className="text-lg font-bold">Reset Input 💥</h3>
           <p className="py-4">
-            <span>This button will clear all inputs and fetch the latest currency exchange rates.</span>
+            <span>This button will clear all inputs.</span>
           </p>
           <h3 className="text-lg font-bold">Attempt Rate Update 💁‍♀️</h3>
           <p className="py-4">
