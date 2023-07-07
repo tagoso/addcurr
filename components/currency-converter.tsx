@@ -372,7 +372,7 @@ const ForexConverter: React.FC = () => {
       className={`${
         selectedName === code
           ? "h-auto w-1/2 overflow-hidden rounded-md bg-gray-200 p-1 shadow-lg dark:bg-gray-600 sm:w-1/3"
-          : "h-auto w-1/2 overflow-hidden rounded-md p-1 hover:bg-gray-200  hover:dark:bg-gray-600 sm:w-1/3"
+          : "h-auto w-1/2 overflow-hidden rounded-md p-1 sm:w-1/3  lg:hover:bg-gray-200 lg:hover:dark:bg-gray-600"
       }`}
     >
       <button
