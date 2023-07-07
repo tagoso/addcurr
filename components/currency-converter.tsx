@@ -316,7 +316,7 @@ const ForexConverter: React.FC = () => {
                 - FastForex (our data sourse) is not responding. You can check its status{" "}
                 <a className="underline" href="https://www.fastforex.io/">
                   here
-                </a>{" "}
+                </a>
                 .
               </li>
               <li>- Your internet connection is not stable.</li>
