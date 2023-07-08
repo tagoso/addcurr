@@ -372,8 +372,8 @@ const ForexConverter: React.FC = () => {
       key={code}
       className={`${
         typeof currency.value === "number" && currency.value !== 0
-          ? "h-auto w-1/2 overflow-hidden rounded-lg bg-gray-200 p-1 dark:bg-gray-600 sm:w-1/3"
-          : "h-auto w-1/2 overflow-hidden rounded-lg p-1 sm:w-1/3  lg:hover:bg-gray-200 lg:hover:dark:bg-gray-600"
+          ? "h-auto w-1/2 overflow-hidden rounded-lg bg-slate-200 p-1 dark:bg-slate-600 sm:w-1/3"
+          : "h-auto w-1/2 overflow-hidden rounded-lg p-1 sm:w-1/3  lg:hover:bg-slate-200 lg:hover:dark:bg-slate-600"
       }`}
     >
       <button
@@ -418,7 +418,7 @@ const ForexConverter: React.FC = () => {
       </details>
 
       <div
-        className="m-2 box-border h-auto w-auto cursor-pointer rounded-xl border-2 border-gray-300 bg-gray-200 p-2 text-lg dark:border-gray-700 dark:bg-gray-800 dark:text-slate-400 md:text-2xl"
+        className="m-2 box-border h-auto w-auto cursor-pointer rounded-xl border-2 border-slate-300 bg-slate-200 p-2 text-lg dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400 md:text-2xl"
         onClick={() =>
           copyToClipboard(
             !["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(selectedName)
@@ -437,17 +437,17 @@ const ForexConverter: React.FC = () => {
       </div>
       <div className="m-1 p-1 px-2 text-sm text-slate-500 dark:text-slate-400 md:text-base">✅ {formattedUTCDate}</div>
       <div className="m-1 py-1">
-        <button onClick={resetInput} className="btn-xs btn mx-1 bg-gray-200">
+        <button onClick={resetInput} className="btn-xs btn mx-1 bg-slate-200">
           <span className="loading loading-ring loading-xs"></span>
           Reset Input
         </button>
         {isDisabled ? (
-          <button className="btn-xs btn mx-1 bg-gray-200">
+          <button className="btn-xs btn mx-1 bg-slate-200">
             <span className="loading loading-ring loading-xs"></span>
             Attempt Rate Update
           </button>
         ) : (
-          <button onClick={refreshRate} className="btn-xs btn mx-1 bg-gray-200">
+          <button onClick={refreshRate} className="btn-xs btn mx-1 bg-slate-200">
             <span className="loading loading-ring loading-xs"></span>
             Attempt Rate Update
           </button>

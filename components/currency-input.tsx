@@ -41,7 +41,7 @@ const InputCurrency: React.FC<InputCurrencyProps> = ({
         decimalScale={!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(name) ? 2 : 0}
         autoComplete="off"
         className="my-1 w-full flex-wrap bg-slate-50 text-right
-        text-lg placeholder:text-slate-400 dark:border-gray-700 dark:bg-gray-800 md:text-2xl"
+        text-lg placeholder:text-slate-400 dark:border-slate-700 dark:bg-slate-800 md:text-2xl"
         onValueChange={(v) => {
           // if input ends with ".", pass the value as it is
           if (v && v.endsWith(".")) {
