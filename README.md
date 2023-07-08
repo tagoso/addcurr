@@ -8,7 +8,7 @@ AddCurr converts multiple currencies into one. Yes, you can input JPY, EUR, GBP 
 
 ## Your travel & asset partner
 
-Let's say your bugdet is 3,000 USD, and going to travel and use EUR🇪🇺, JPY🇯🇵, and THB🇹🇭.
+Let's say your bugdet is 3,000 USD, and going to travel and use EUR 🇪🇺, JPY 🇯🇵, and THB 🇹🇭.
 You spent 700 EUR and 120,000 JPY... How much USD/THB can you use in Thailand? 🏖️
 
 Answer with AddCurr: You used 1595.98 USD, so you still have 1404.02 USD / 49,558THB to go extravagant💪
@@ -18,7 +18,7 @@ Answer with AddCurr: You used 1595.98 USD, so you still have 1404.02 USD / 49,55
 - Convert multiple currencies into one currency
 - Real-time data from [FastForex](https://www.fastforex.io/)
 - 21 hand-picked currencies from 6 continents
-  - USD🇺🇸,EUR🇪🇺,CNY🇨🇳,JPY🇯🇵,GBP🇬🇧,AUD🇦🇺,INR🇮🇳,BRL🇧🇷,ZAR🇿🇦,CHF🇨🇭,SEK🇸🇪,CAD🇨🇦,RUB🇷🇺,MYX🇲🇽,TRY🇹🇷,SAR🇸🇦,MYR🇲🇾,NZD🇳🇿,THB🇹🇭,PHP🇵🇭,NGN🇳🇬
+  - USD 🇺🇸,EUR 🇪🇺,CNY 🇨🇳,JPY 🇯🇵,GBP 🇬🇧,AUD 🇦🇺,INR 🇮🇳,BRL 🇧🇷,ZAR 🇿🇦,CHF 🇨🇭,SEK 🇸🇪,CAD 🇨🇦,RUB 🇷🇺,MYX 🇲🇽,TRY 🇹🇷,SAR 🇸🇦,MYR 🇲🇾,NZD 🇳🇿,THB 🇹🇭,PHP 🇵🇭,NGN 🇳🇬
 - Simple and intuitive design
 - Free to use!
 
