@@ -5,6 +5,7 @@ import FetchAPI from "@/lib/FetchAPI";
 import CurrencyInput from "./currency-input";
 import SiteFooter from "./site-footer";
 import { ForexDataProps, Currency, CurrencyInfo } from "@/types/interfaces";
+import { isNumberObject } from "util/types";
 
 // What this file exports to page
 const ForexConverter: React.FC = () => {
@@ -288,7 +289,7 @@ const ForexConverter: React.FC = () => {
   // reset input
   const resetInput = async () => {
     for (const currency of Object.values(currencies)) {
-      currency.setValue("");
+      currency.setValue(0);
     }
   };
 
@@ -370,9 +371,9 @@ const ForexConverter: React.FC = () => {
     <div
       key={code}
       className={`${
-        selectedName === code
-          ? "h-auto w-1/2 overflow-hidden rounded-md bg-gray-200 p-1 shadow-lg dark:bg-gray-600 sm:w-1/3"
-          : "h-auto w-1/2 overflow-hidden rounded-md p-1 sm:w-1/3  lg:hover:bg-gray-200 lg:hover:dark:bg-gray-600"
+        typeof currency.value === "number" && currency.value !== 0
+          ? "h-auto w-1/2 overflow-hidden rounded-lg bg-gray-200 p-1 dark:bg-gray-600 sm:w-1/3"
+          : "h-auto w-1/2 overflow-hidden rounded-lg p-1 sm:w-1/3  lg:hover:bg-gray-200 lg:hover:dark:bg-gray-600"
       }`}
     >
       <button
@@ -390,7 +391,7 @@ const ForexConverter: React.FC = () => {
         name={code}
         type={"search"}
         prefix={""}
-        defaultValue={""}
+        defaultValue={undefined}
         value={currency.value ? currency.value.toString() : ""}
         decimalSeparator={"."}
         placeholder={!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(code) ? "0.00" : "0"}

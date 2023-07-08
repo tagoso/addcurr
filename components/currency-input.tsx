@@ -10,7 +10,7 @@ interface InputCurrencyProps {
   placeholder: string;
   decimalSeparator: string;
   value: any;
-  defaultValue: undefined | string;
+  defaultValue: string | undefined | number;
   baseCurrency: () => void;
 }
 
