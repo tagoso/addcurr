@@ -345,8 +345,11 @@ const ForexConverter: React.FC = () => {
   const localDate = utcDateStr.replace(" ", "T") + "Z";
   const date = new Date(localDate);
 
+  // Array of month names in English
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
   // Format the date using getUTCFullYear(), getUTCMonth(), getUTCDate(), getUTCHours(), and getUTCMinutes() methods
-  const formattedUTCDate = `${date.getUTCDate()}.${date.getUTCMonth() + 1}.${date.getUTCFullYear()} ${(
+  const formattedUTCDate = `${date.getUTCDate()} ${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()} ${(
     "0" + date.getUTCHours()
   ).slice(-2)}:${("0" + date.getUTCMinutes()).slice(-2)} GMT`;
 
