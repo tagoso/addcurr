@@ -237,7 +237,7 @@ const ForexConverter: React.FC = () => {
   const refreshRate = async () => {
     try {
       setIsDisabled(true);
-      setTimeout(() => setIsDisabled(false), 20000); // Enable the button after xx seconds
+      setTimeout(() => setIsDisabled(false), 5000); // Enable the button after xx seconds
       const data = await FetchAPI();
       setForexData(data);
     } catch (error) {
