@@ -374,7 +374,7 @@ const ForexConverter: React.FC = () => {
     <div
       key={code}
       className={`${
-        typeof currency.value === "number" && currency.value !== 0
+        selectedName === code
           ? "h-auto w-1/2 overflow-hidden rounded-lg bg-slate-200 p-1 dark:bg-slate-600 sm:w-1/3"
           : "h-auto w-1/2 overflow-hidden rounded-lg p-1 sm:w-1/3"
       }`}
@@ -383,7 +383,7 @@ const ForexConverter: React.FC = () => {
         onClick={() => baseCurrency(currency)}
         className={`${
           selectedName === code
-            ? "w-full bg-gradient-to-r from-orange-400 from-40% via-red-500 via-50% to-purple-600 to-60% bg-clip-text text-lg font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-indigo-400 md:text-2xl"
+            ? "w-full bg-slate-200 bg-gradient-to-r from-orange-400 from-40% via-red-500 via-50% to-purple-600 to-60% bg-clip-text text-lg font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-indigo-400 md:text-2xl"
             : "w-full text-lg italic text-slate-500 hover:bg-gradient-to-r hover:from-orange-400 hover:from-40% hover:via-red-500 hover:via-50% hover:to-purple-600 hover:to-60% hover:bg-clip-text hover:font-extrabold hover:italic hover:text-transparent hover:dark:from-yellow-400 hover:dark:via-pink-500 hover:dark:to-indigo-400 md:text-2xl"
         }`}
       >
@@ -421,7 +421,7 @@ const ForexConverter: React.FC = () => {
       </details>
 
       <div
-        className="m-2 box-border h-auto w-auto cursor-pointer rounded-xl border-2 border-slate-300 bg-slate-200 p-2 text-lg dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400 md:text-2xl"
+        className="m-2 box-border h-auto w-auto cursor-pointer rounded-xl border-2 border-slate-300 bg-slate-200 p-2 text-lg dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 md:text-2xl"
         onClick={() =>
           copyToClipboard(
             !["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(selectedName)
