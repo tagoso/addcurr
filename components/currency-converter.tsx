@@ -447,12 +447,12 @@ const ForexConverter: React.FC = () => {
         {isDisabled ? (
           <button className="btn-xs btn mx-1 bg-slate-200">
             <span className="loading loading-ring loading-xs"></span>
-            Attempt Rate Update
+            Rate Update
           </button>
         ) : (
           <button onClick={refreshRate} className="btn-xs btn mx-1 bg-slate-200">
             <span className="loading loading-ring loading-xs"></span>
-            Attempt Rate Update
+            Rate Update
           </button>
         )}
       </div>
