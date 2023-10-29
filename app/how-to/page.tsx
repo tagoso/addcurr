@@ -7,6 +7,10 @@ export default function Page() {
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           Quick guide to AddCurr
         </h1>
+        <a
+          href="https://www.producthunt.com/posts/addcurr?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-addcurr"
+          target="_blank"
+        ></a>
         <ol>
           <li>1. Fill in all money you want to count</li>
           <li>2. Choose currency to convert</li>
