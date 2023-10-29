@@ -36,37 +36,37 @@ This is a solo project of Tago So, but most of heavy duties are done by wonderfu
 
 Please join me if you know stuff below. Let's power up AddCurr together 💪
 
-### UI Libraries
+UI Libraries
 
 - [React](https://react.dev/)
 
-### Frontend Framework
+Frontend Framework
 
 - [Next.js](https://nextjs.org/)
 
-### CSS Framework
+CSS Framework
 
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Daisy UI](https://daisyui.com/)
 
-### Languages
+Languages
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [JSX](https://react.dev/learn/writing-markup-with-jsx)
 
-### API used
+API used
 
 - [FastForex](https://www.fastforex.io/)
 
-### Hosting
+Hosting
 
 - [Vercel](https://vercel.com/)
 
-### Packages
+Packages
 
 - [react-currency-input-field](https://www.npmjs.com/package/react-currency-input-field)
 
-### Favicon
+Favicon
 
 - [Twemoji](https://twemoji.twitter.com/)
 
