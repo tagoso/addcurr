@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AddCurr",
   description:
-    "AddCurr, your one-stop currency management tool. Consolidate and convert multiple currencies effortlessly with just one click! Ideal for travelers, business professionals, and anyone managing international transactions. Get accurate conversion rates instantly.",
+    "AddCurr, a multiple currency converter. Ideal for travelers, business professionals, and anyone managing international transactions. Get accurate conversion rates instantly.",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
