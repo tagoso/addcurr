@@ -414,7 +414,7 @@ const ForexConverter: React.FC = () => {
       </div>
 
       <details>
-        <summary className="m-1 w-max cursor-pointer pl-1 dark:text-slate-400">12 more currencies!</summary>
+        <summary className="m-1 w-max cursor-pointer pl-1 underline dark:text-slate-400">12 more currencies!</summary>
         <div className="flex flex-wrap content-start">
           {Object.entries(currencies).slice(9).map(createCurrencyComponent)}
         </div>
