@@ -7,10 +7,10 @@ export default function Page() {
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           Quick guide to AddCurr
         </h1>
-        <ol className="list-decimal">
-          <li>Fill in all money you want to count</li>
-          <li>Choose currency to convert</li>
-          <li>See the result at the bottom!</li>
+        <ol>
+          <li>1. Fill in all money you want to count</li>
+          <li>2. Choose currency to convert</li>
+          <li>3. See the result at the bottom!</li>
         </ol>
         <h2 className="font-boldmb-4 text-4xl  leading-none tracking-tight text-gray-900 dark:text-white">
           What you can do
