@@ -2,7 +2,7 @@
 
 <a href="https://www.producthunt.com/posts/addcurr?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-addcurr" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=403665&theme=light" alt="AddCurr - Convert&#0032;multiple&#0032;currencies&#0032;into&#0032;one | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-AddCurr lets you handle multiple currencies with ease, like never before!
+AddCurr is the simplest portfolio maker. It lets you handle multiple currencies with ease, like never before!
 
 AddCurr converts multiple currencies into one. Yes, you can input JPY, EUR, GBP and convert all of them into USD with one click.
 
