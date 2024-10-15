@@ -64,7 +64,7 @@ const ForexConverter: React.FC = () => {
   const [phpRate, setPhpRate] = useState<number | undefined>(undefined);
   const [ngnRate, setNgnRate] = useState<number | undefined>(undefined);
 
-  // List of currencies
+  // List of currencies. This is the order on frontend.
   const currencies: { [key: string]: CurrencyInfo } = {
     USD: {
       name: "USD",
@@ -108,6 +108,13 @@ const ForexConverter: React.FC = () => {
       symbol: "A$",
       setValue: setAudValue,
     },
+    NZD: {
+      name: "NZD",
+      value: nzdValue,
+      rate: nzdRate,
+      symbol: "NZ$",
+      setValue: setNzdValue,
+    },
     INR: {
       name: "INR",
       value: inrValue,
@@ -121,6 +128,13 @@ const ForexConverter: React.FC = () => {
       rate: brlRate,
       symbol: "R$",
       setValue: setBrlValue,
+    },
+    THB: {
+      name: "THB",
+      value: thbValue,
+      rate: thbRate,
+      symbol: "฿",
+      setValue: setThbValue,
     },
     ZAR: {
       name: "ZAR",
@@ -184,20 +198,6 @@ const ForexConverter: React.FC = () => {
       rate: myrRate,
       symbol: "RM",
       setValue: setMyrValue,
-    },
-    NZD: {
-      name: "NZD",
-      value: nzdValue,
-      rate: nzdRate,
-      symbol: "NZ$",
-      setValue: setNzdValue,
-    },
-    THB: {
-      name: "THB",
-      value: thbValue,
-      rate: thbRate,
-      symbol: "฿",
-      setValue: setThbValue,
     },
     PHP: {
       name: "PHP",
@@ -397,7 +397,7 @@ const ForexConverter: React.FC = () => {
         defaultValue={undefined}
         value={currency.value ? currency.value.toString() : ""}
         decimalSeparator={"."}
-        placeholder={!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(code) ? "0.00" : "0"}
+        placeholder={"0"}
         onInputChange={currency.setValue}
         baseCurrency={function (): void {
           throw new Error("Function not implemented.");
@@ -409,17 +409,6 @@ const ForexConverter: React.FC = () => {
   // return jsx
   return (
     <>
-      <div className="flex flex-wrap content-start">
-        {Object.entries(currencies).slice(0, 9).map(createCurrencyComponent)}
-      </div>
-
-      <details>
-        <summary className="m-1 w-max cursor-pointer pl-1 underline dark:text-slate-400">12 more currencies!</summary>
-        <div className="flex flex-wrap content-start">
-          {Object.entries(currencies).slice(9).map(createCurrencyComponent)}
-        </div>
-      </details>
-
       <div
         className="m-2 box-border h-auto w-auto cursor-pointer rounded-xl border-2 border-slate-300 bg-slate-200 p-2 text-lg dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 md:text-2xl"
         onClick={() =>
@@ -438,7 +427,7 @@ const ForexConverter: React.FC = () => {
           {selectedName}{" "}
         </span>
       </div>
-      <div className="m-1 p-1 px-2 text-sm text-slate-500 dark:text-slate-400 md:text-base">✅ {formattedUTCDate}</div>
+
       <div className="m-1 py-1">
         <button onClick={resetInput} className="btn-xs btn mx-1 bg-slate-200">
           <span className="loading loading-ring loading-xs"></span>
@@ -456,6 +445,18 @@ const ForexConverter: React.FC = () => {
           </button>
         )}
       </div>
+      <div className="flex flex-wrap content-start">
+        {Object.entries(currencies).slice(0, 10).map(createCurrencyComponent)}
+      </div>
+
+      <details>
+        <summary className="m-1 w-max cursor-pointer pl-1 underline dark:text-slate-400">11 more currencies!</summary>
+        <div className="flex flex-wrap content-start">
+          {Object.entries(currencies).slice(10).map(createCurrencyComponent)}
+        </div>
+      </details>
+      <div className="m-1 p-1 px-2 text-sm text-slate-500 dark:text-slate-400 md:text-base">✅ {formattedUTCDate}</div>
+
       <SiteFooter currencies={currencies} formattedUTCDate={formattedUTCDate} />
     </>
   );
