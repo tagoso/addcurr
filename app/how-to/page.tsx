@@ -41,7 +41,7 @@ export default function Page() {
         </h2>
         <p>
           🇺🇸USD 🇪🇺EUR 🇨🇳CNY 🇯🇵JPY 🇬🇧GBP 🇦🇺AUD 🇮🇳INR 🇧🇷BRL 🇿🇦ZAR 🇨🇭CHF 🇸🇪SEK 🇨🇦CAD 🇷🇺RUB 🇲🇽MYX 🇹🇷TRY 🇸🇦SAR 🇲🇾MYR 🇳🇿NZD
-          🇹🇭THB 🇵🇭PHP 🇳🇬NGN
+          🇹🇭THB 🇵🇭PHP 🇳🇬NGN BTC ETH BNB BNB SOL XRP ICP
         </p>
         <Link className="underline" href="/">
           back
