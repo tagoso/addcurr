@@ -43,12 +43,10 @@ const InputCurrency: React.FC<InputCurrencyProps> = ({
         className="my-1 w-full flex-wrap bg-slate-50 text-right
         text-lg placeholder:text-slate-400 dark:border-slate-700 dark:bg-slate-800 md:text-2xl"
         onValueChange={(v) => {
-          // if input ends with ".", pass the value as it is
-          if (v && v.endsWith(".")) {
-            onInputChange(v);
+          if (v !== undefined) {
+            onInputChange(v); // 入力値をそのまま渡す
           } else {
-            // convert value to number
-            onInputChange(v ? parseFloat(v) : undefined);
+            onInputChange(undefined);
           }
         }}
       />
