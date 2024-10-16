@@ -40,6 +40,12 @@ const ForexConverter: React.FC = () => {
   const [thbValue, setThbValue] = useState<number | undefined>(undefined);
   const [phpValue, setPhpValue] = useState<number | undefined>(undefined);
   const [ngnValue, setNgnValue] = useState<number | undefined>(undefined);
+  const [btcValue, setBtcValue] = useState<number | undefined>(undefined);
+  const [ethValue, setEthValue] = useState<number | undefined>(undefined);
+  const [bnbValue, setBnbValue] = useState<number | undefined>(undefined);
+  const [solValue, setSolValue] = useState<number | undefined>(undefined);
+  const [xrpValue, setXrpValue] = useState<number | undefined>(undefined);
+  const [icpValue, setIcpValue] = useState<number | undefined>(undefined);
 
   // useState for currency rate from API
   const [usdRate, setUsdRate] = useState<number | undefined>(undefined);
@@ -63,6 +69,12 @@ const ForexConverter: React.FC = () => {
   const [thbRate, setThbRate] = useState<number | undefined>(undefined);
   const [phpRate, setPhpRate] = useState<number | undefined>(undefined);
   const [ngnRate, setNgnRate] = useState<number | undefined>(undefined);
+  const [btcRate, setBtcRate] = useState<number | undefined>(undefined);
+  const [ethRate, setEthRate] = useState<number | undefined>(undefined);
+  const [bnbRate, setBnbRate] = useState<number | undefined>(undefined);
+  const [solRate, setSolRate] = useState<number | undefined>(undefined);
+  const [xrpRate, setXrpRate] = useState<number | undefined>(undefined);
+  const [icpRate, setIcpRate] = useState<number | undefined>(undefined);
 
   // List of currencies. This is the order on frontend.
   const currencies: { [key: string]: CurrencyInfo } = {
@@ -135,6 +147,20 @@ const ForexConverter: React.FC = () => {
       rate: thbRate,
       symbol: "฿",
       setValue: setThbValue,
+    },
+    BTC: {
+      name: "BTC",
+      value: btcValue,
+      rate: btcRate,
+      symbol: "₿",
+      setValue: setBtcValue,
+    },
+    ETH: {
+      name: "ETH",
+      value: ethValue,
+      rate: ethRate,
+      symbol: "Ξ",
+      setValue: setEthValue,
     },
     ZAR: {
       name: "ZAR",
@@ -213,6 +239,34 @@ const ForexConverter: React.FC = () => {
       symbol: "₦",
       setValue: setNgnValue,
     },
+    BNB: {
+      name: "BNB",
+      value: bnbValue,
+      rate: bnbRate,
+      symbol: "BNB",
+      setValue: setBnbValue,
+    },
+    SOL: {
+      name: "SOL",
+      value: solValue,
+      rate: solRate,
+      symbol: "SOL",
+      setValue: setSolValue,
+    },
+    XRP: {
+      name: "XRP",
+      value: xrpValue,
+      rate: xrpRate,
+      symbol: "XRP",
+      setValue: setXrpValue,
+    },
+    ICP: {
+      name: "ICP",
+      value: icpValue,
+      rate: icpRate,
+      symbol: "∞",
+      setValue: setIcpValue,
+    },
   };
 
   // fetch data when the page is loaded
@@ -281,6 +335,12 @@ const ForexConverter: React.FC = () => {
       setThbRate(forexData.results.THB);
       setPhpRate(forexData.results.PHP);
       setNgnRate(forexData.results.NGN);
+      setBtcRate(forexData.results.BTC);
+      setEthRate(forexData.results.ETH);
+      setBnbRate(forexData.results.BNB);
+      setSolRate(forexData.results.SOL);
+      setXrpRate(forexData.results.XRP);
+      setIcpRate(forexData.results.ICP);
       setSelectedBase(forexData.results[selectedName]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -336,7 +396,11 @@ const ForexConverter: React.FC = () => {
 
   // format for displaying purpose
   const numberWithCommas = (num: { toString: () => string }) => {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    const [integerPart, decimalPart] = num.toString().split(".");
+
+    const formattedInteger = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    return decimalPart ? `${formattedInteger}.${decimalPart}` : formattedInteger;
   };
 
   // for meta data
@@ -414,15 +478,21 @@ const ForexConverter: React.FC = () => {
         onClick={() =>
           copyToClipboard(
             !["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(selectedName)
-              ? totalValue.toFixed(2)
-              : totalValue.toFixed(0)
+              ? ["BTC", "ETH", "BNB", "SOL"].includes(selectedName)
+                ? totalValue.toFixed(6)
+                : totalValue.toFixed(2) // 仮想通貨なら8桁、それ以外は2桁
+              : totalValue.toFixed(0) // 特定の法定通貨は整数
           )
         }
       >
         Total:{" "}
-        {!["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(selectedName)
-          ? numberWithCommas(totalValue.toFixed(2))
-          : numberWithCommas(totalValue.toFixed(0))}{" "}
+        {
+          !["JPY", "INR", "THB", "RUB", "PHP", "NGN"].includes(selectedName)
+            ? numberWithCommas(
+                ["BTC", "ETH", "BNB", "SOL"].includes(selectedName) ? totalValue.toFixed(6) : totalValue.toFixed(2) // 仮想通貨なら8桁、それ以外は2桁
+              )
+            : numberWithCommas(totalValue.toFixed(0)) // 特定の法定通貨は整数
+        }{" "}
         <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text px-1 text-lg font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-indigo-400 md:text-2xl">
           {selectedName}{" "}
         </span>
@@ -446,13 +516,15 @@ const ForexConverter: React.FC = () => {
         )}
       </div>
       <div className="flex flex-wrap content-start">
-        {Object.entries(currencies).slice(0, 10).map(createCurrencyComponent)}
+        {Object.entries(currencies).slice(0, 12).map(createCurrencyComponent)}
       </div>
 
       <details>
-        <summary className="m-1 w-max cursor-pointer pl-1 underline dark:text-slate-400">11 more currencies!</summary>
+        <summary className="m-1 w-max cursor-pointer pl-1 underline dark:text-slate-400">
+          15 more currencies & crypto!
+        </summary>
         <div className="flex flex-wrap content-start">
-          {Object.entries(currencies).slice(10).map(createCurrencyComponent)}
+          {Object.entries(currencies).slice(12).map(createCurrencyComponent)}
         </div>
       </details>
       <div className="m-1 p-1 px-2 text-sm text-slate-500 dark:text-slate-400 md:text-base">✅ {formattedUTCDate}</div>
