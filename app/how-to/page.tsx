@@ -21,17 +21,20 @@ export default function Page() {
         </h2>
         <ul></ul>
         <p>
+          If you have asset in multiple currencies, you used to exchange each currency and sum up. With AddCurr, all you
+          need to do is just filling in all currencies and choose which one to see in sum. Addcurr will do all the
+          tedious work.
+        </p>
+        <p>
           AddCurr allows you to convert multiple currencies into{" "}
           <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-indigo-400">
             one
           </span>{" "}
-          currency. In other words, the simplest portfolio maker. It converts and sum up any currencies to one
+          currency. In other words, the simplest portfolio maker. It converts and sum up any currencies to{" "}
+          <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text font-extrabold italic text-transparent dark:from-yellow-400 dark:via-pink-500 dark:to-indigo-400">
+            one
+          </span>{" "}
           immediately.
-        </p>
-        <p>
-          If you have asset in multiple currencies, you used to exchange each currency and sum up. With AddCurr, all you
-          need to do is just filling in all currencies and choose which one to see in sum. Addcurr will do all the
-          tedious work.
         </p>
         <h2 className="font-boldmb-4 text-4xl  leading-none tracking-tight text-gray-900 dark:text-white">
           Currencies
