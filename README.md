@@ -1,5 +1,7 @@
 # AddCurr 💱
 
+[Updated!] 6 favorite cryptocurrencies (BTC, ETH, BNB, BNB, SOL, XRP and ICP) are added!
+
 <a href="https://www.producthunt.com/posts/addcurr?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-addcurr" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=403665&theme=light" alt="AddCurr - Convert&#0032;multiple&#0032;currencies&#0032;into&#0032;one | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 AddCurr is the simplest portfolio maker. It lets you handle multiple currencies with ease, like never before!
@@ -21,6 +23,7 @@ Answer with AddCurr: You used 1595.98 USD, so you still have 1404.02 USD / 49,55
 - Real-time data from [FastForex](https://www.fastforex.io/)
 - 21 hand-picked currencies from 6 continents
   - 🇺🇸USD 🇪🇺EUR 🇨🇳CNY 🇯🇵JPY 🇬🇧GBP 🇦🇺AUD 🇮🇳INR 🇧🇷BRL 🇿🇦ZAR 🇨🇭CHF 🇸🇪SEK 🇨🇦CAD 🇷🇺RUB 🇲🇽MYX 🇹🇷TRY 🇸🇦SAR 🇲🇾MYR 🇳🇿NZD 🇹🇭THB 🇵🇭PHP 🇳🇬NGN
+- 6 top cryptocurrencies (BTC, ETH, BNB, BNB, SOL, XRP and ICP)
 - Simple and intuitive design
 - Free to use!
 
@@ -36,39 +39,16 @@ This is a solo project of Tago So, but most of heavy duties are done by wonderfu
 
 Please join me if you know stuff below. Let's power up AddCurr together 💪
 
-UI Libraries
-
-- [React](https://react.dev/)
-
-Frontend Framework
-
-- [Next.js](https://nextjs.org/)
-
-CSS Framework
-
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Daisy UI](https://daisyui.com/)
-
-Languages
-
-- [TypeScript](https://www.typescriptlang.org/)
-- [JSX](https://react.dev/learn/writing-markup-with-jsx)
-
-API used
-
-- [FastForex](https://www.fastforex.io/)
-
-Hosting
-
-- [Vercel](https://vercel.com/)
-
-Packages
-
-- [react-currency-input-field](https://www.npmjs.com/package/react-currency-input-field)
-
-Favicon
-
-- [Twemoji](https://twemoji.twitter.com/)
+- [React](https://react.dev/) UI Libraries
+- [Next.js](https://nextjs.org/) Frontend Framework
+- [Tailwind CSS](https://tailwindcss.com/) CSS Framework
+- [Daisy UI](https://daisyui.com/) CSS Framework
+- [TypeScript](https://www.typescriptlang.org/) Languages
+- [JSX](https://react.dev/learn/writing-markup-with-jsx) Languages
+- [FastForex](https://www.fastforex.io/) API
+- [Vercel](https://vercel.com/) Hosting
+- [react-currency-input-field](https://www.npmjs.com/package/react-currency-input-field) NPM Package
+- [Twemoji](https://twemoji.twitter.com/) Favicon
 
 ## Disclaimer
 
