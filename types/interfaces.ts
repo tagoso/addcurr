@@ -23,6 +23,12 @@ export interface ForexDataProps {
       THB: number;
       PHP: number;
       NGN: number;
+      BTC: number;
+      ETH: number;
+      BNB: number;
+      SOL: number;
+      XRP: number;
+      ICP: number;
     };
     updated: string;
     ms: number;
@@ -50,7 +56,14 @@ export type Currency =
 | "NZD"
 | "THB"
 | "PHP"
-| "NGN";
+| "NGN"
+| "BTC"
+| "ETH"
+| "BNB"
+| "SOL"
+| "XRP"
+| "ICP"
+;
 
 // interface for currency object
 export interface CurrencyInfo {
