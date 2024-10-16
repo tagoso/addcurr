@@ -38,7 +38,6 @@ const InputCurrency: React.FC<InputCurrencyProps> = ({
         placeholder={placeholder}
         decimalSeparator={decimalSeparator}
         decimalsLimit={10}
-        decimalScale={10}
         autoComplete="off"
         className="my-1 w-full flex-wrap bg-slate-50 text-right
         text-lg placeholder:text-slate-400 dark:border-slate-700 dark:bg-slate-800 md:text-2xl"
