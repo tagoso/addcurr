@@ -54,7 +54,7 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           <h3 className="text-lg font-bold">Data Source 📈</h3>
           <p className="py-4">
             <span>
-              AddCurr gets real-time data from{" "}
+              Addcurr gets real-time data from{" "}
               <a className="underline" href="https://www.fastforex.io/">
                 fastFOREX
               </a>
@@ -91,7 +91,7 @@ const SiteFooter: React.FC<SiteFooterProps> = ({ currencies, formattedUTCDate })
           <h3 className="text-lg font-bold">Disclaimer 💃</h3>
           <p className="py-4">
             <span>
-              AddCurr provides data for informational use only. We do not offer financial, investment, legal, or
+              Addcurr provides data for informational use only. We do not offer financial, investment, legal, or
               accounting advice. It is up to you to decide what financial actions are right for you. Keep in mind, the
               data we provide might be delayed. Also, we do not confirm the accuracy of our data and we are not obliged
               to do so.

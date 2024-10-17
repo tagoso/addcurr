@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <>
       <header className="m-0 items-center">
-        AddCurr - simple portfolio.{" "}
+        Addcurr - the fastest portfolio.{" "}
         <Link className="underline" href="/how-to">
           How to use?
         </Link>

@@ -5,9 +5,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AddCurr",
+  title: "Addcurr",
   description:
-    "AddCurr is the simplest portfolio maker, a multiple currency converter. Ideal for travelers, business professionals, and anyone managing international transactions. Get accurate conversion rates instantly.",
+    "Addcurr is the simplest portfolio maker, a multiple currency converter. Ideal for travelers, business professionals, and anyone managing international transactions. Get accurate conversion rates instantly.",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
