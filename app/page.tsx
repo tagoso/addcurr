@@ -10,7 +10,9 @@ export default function Page() {
           How to use?
         </Link>
       </header>
-      Addcurr will stop services on 15th December 2025.
+      <span className="text-red-600 font-bold">
+        Addcurr will stop services on 15th December 2025.
+      </span>
       <br />
       Thanks for 2.5 years of being together!
       <br />
