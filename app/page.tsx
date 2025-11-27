@@ -10,6 +10,9 @@ export default function Page() {
           How to use?
         </Link>
       </header>
+      Addcurr will stop services on 15th December 2025.
+      <br />
+      Thanks for 2.5 years of support!
       <br />
       <ForexConverter />
     </>
