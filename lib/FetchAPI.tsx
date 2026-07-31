@@ -1,6 +1,9 @@
 async function FetchAPI() {
   // 両方のAPIからデータを並行して取得
-  const [res1, res2] = await Promise.all([fetch(`/api`), fetch(`/api2`)]);
+  const [res1, res2] = await Promise.all([
+    fetch(`/addcurr/api`),
+    fetch(`/addcurr/api2`),
+  ]);
 
   // エラーチェック
   if (!res1.ok || !res2.ok) {
